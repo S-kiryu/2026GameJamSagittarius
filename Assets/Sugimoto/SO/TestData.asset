@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e667bb300f76546b55b7c44a42500a, type: 3}
   m_Name: TestData
   m_EditorClassIdentifier: Assembly-CSharp::ThemeData
-  _themeName: testStage
+  _themeName: "\u30C6\u30C8\u30B9\u7528\u30C7\u30FC\u30BF"
   _themeImageList:
   - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}

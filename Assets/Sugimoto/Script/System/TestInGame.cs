@@ -85,7 +85,7 @@ public class TestInGame : MonoBehaviour
             return false;
         }
 
-        foreach (Item item in _selection.SelectedItems)
+        foreach (PicItem item in _selection.SelectedItems)
         {
             if (!remainingAnswers.Remove(item.ItemSprite))
             {
