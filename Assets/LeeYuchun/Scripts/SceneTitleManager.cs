@@ -10,25 +10,32 @@ public class SceneTitleManager : MonoBehaviour
     public void Start()
     {
         ToggleManual(false);
-        ToggleCreadit(false);
+        ToggleCredit(false);
     }
 
-    public void OnClickStart()
+    public void OnClickStartButton()
     {
         // TODO: 正式なシーンのパスを入り替え
         SceneManager.LoadScene("LeeYuchun/Scenes/TestScene_StageSelect");
     }
 
-    public void OnClickCredit()
+    public void OnClickManualButton()
     {
-        Debug.Log("Credit");
+        ToggleManual(true);
     }
 
-    public void OnClickManual() {
-        Debug.Log("Manual");
+    public void OnClickCreditButton()
+    {
+        ToggleCredit(true);
     }
 
-    public void OnClickClose()
+    public void OnClickClosePanelButton()
+    {
+        ToggleManual(false);
+        ToggleCredit(false);
+    }
+
+    public void OnClickCloseGameButton()
     {
         Application.Quit();
     }
@@ -39,7 +46,7 @@ public class SceneTitleManager : MonoBehaviour
         titleElementsContainer.gameObject.SetActive(!visible);
     }
 
-    private void ToggleCreadit(bool visible)
+    private void ToggleCredit(bool visible)
     {
         creditPanel.gameObject.SetActive(visible);
         titleElementsContainer.gameObject.SetActive(!visible);
