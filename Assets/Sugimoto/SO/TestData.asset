@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ThemeData
   _themeName: "\u9B54\u8A0E\u4F10\u738B"
   _selectImage: {fileID: 21300000, guid: ae1dc7e0b35ac4f46b0254ef3a4f52ad, type: 3}
-  _resultBackgroundImage: {fileID: 0}
+  _resultBackgroundImage: {fileID: 21300000, guid: ae1dc7e0b35ac4f46b0254ef3a4f52ad, type: 3}
   _clearCharacterImage: {fileID: 21300000, guid: 51a130135716ef34799922246bc40dde, type: 3}
   _defeatCharacterImage: {fileID: 21300000, guid: f70ebd7e6d4a12a4aafa1955aa0b6dc7, type: 3}
   _themeImageList:

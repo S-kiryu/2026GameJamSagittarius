@@ -10,7 +10,7 @@ public class StageDetailPanel : MonoBehaviour
     /// <summary>
     /// ステージのイメージ
     /// </summary>
-    private Image stageImage;
+    [SerializeField]private Image stageImage;
     public StageData SelectedStage { get; private set; }
 
     /// <summary>
@@ -19,6 +19,7 @@ public class StageDetailPanel : MonoBehaviour
     /// <param name="stage"></param>
     public void ShowStage(StageData stage)
     {
+        Debug.Log(stage.SelectImage);
         SelectedStage = stage;
         stageImage.sprite = stage.SelectImage;
         stageImage.preserveAspect = true;
