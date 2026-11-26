@@ -7,6 +7,7 @@ using System.Collections.Generic;
 /// </summary>
 public class ItemCreatior : MonoBehaviour
 {
+    [Header("アイテム生成設定")]
     /// <summary>
     /// 生成するアイテムのリスト
     /// </summary>
@@ -15,6 +16,10 @@ public class ItemCreatior : MonoBehaviour
     /// アイテムのプレハブ
     /// </summary>
     [SerializeField] private Item _itemPrefab;
+    /// <summary>
+    /// アイテムの親トランスフォームを表す。
+    /// </summary>
+    [SerializeField] private Transform _itemParent;
 
     /// <summary>
     /// アイテム生成

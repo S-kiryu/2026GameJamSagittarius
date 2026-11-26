@@ -5,37 +5,58 @@ using UnityEngine;
 /// </summary>
 public class Item : MonoBehaviour
 {
+    [Header("選択アイテムの設定")]
     /// <summary>
     /// 選択してるかわかるようにするふち
     /// </summary>
     [SerializeField] private GameObject selectionBorder;
     /// <summary>
+    /// 選択済みかどうかTrueなら選択済み、Falseなら未選択
+    /// </summary>
+    [SerializeField] private bool isSelected;
+    /// <summary>
     /// ItemData property
     /// </summary>
     private ItemData itemData;
-    /// <summary>
-    /// 選択済みかどうか
-    /// </summary>
-    private bool isSelected;
+
+    private void Awake()
+    {
+        UpdateBorder();
+    }
+
+    public void ToggleSelection()
+    {
+        isSelected = !isSelected;
+        UpdateBorder();
+    }
 
     private void SetItemData(ItemData data)
     {
         itemData = data;
     }
 
-    /// <summary>
-    /// アイテムの初期化処理
-    /// </summary>
-    private void Initialize()
+
+    private void UpdateBorder()
     {
-        
+        if (selectionBorder != null && selectionBorder.activeSelf != isSelected)
+        {
+            selectionBorder.SetActive(isSelected);
+        }
     }
 
-    /// <summary>
-    /// 選択状態を切り替える
-    /// </summary>
-    private void ToggleSelection()
+#if UNITY_EDITOR
+    private void OnValidate()
     {
-        isSelected = !isSelected;
+        UnityEditor.EditorApplication.delayCall -= PreviewBorder;
+        UnityEditor.EditorApplication.delayCall += PreviewBorder;
     }
+
+    private void PreviewBorder()
+    {
+        if (this != null && !Application.isPlaying)
+        {
+            UpdateBorder();
+        }
+    }
+#endif
 }
