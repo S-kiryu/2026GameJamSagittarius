@@ -5,9 +5,16 @@ public class YesButton : MonoBehaviour
 {
     public string gameSceneName = "GameScene";
 
+    private AsyncOperation _sceneLoad;
+
     public void ConfirmStage()
     {
+        if (_sceneLoad != null)
+        {
+            return;
+        }
+
         Debug.Log("シーンを移行");
-        SceneManager.LoadScene(gameSceneName);
+        _sceneLoad = SceneManager.LoadSceneAsync(gameSceneName);
     }
 }
