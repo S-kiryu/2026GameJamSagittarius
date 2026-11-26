@@ -1,7 +1,8 @@
-//using TMPro;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-//using Kiya.Data;
 
 namespace Kiya.Result
 {
@@ -12,70 +13,45 @@ namespace Kiya.Result
         [SerializeField] GameObject _success; //成功時のUI
         [SerializeField] GameObject _failure; //失敗時のUI
         [SerializeField] RectTransform _titleButton; //タイトル画面へ移動するボタン
-                                                     //[SerializeField] TMP_Text _result;
-                                                     //[SerializeField] TMP_Text _message;
 
-        void Start()
+        private void Start()
         {
-            var gm = GameManagerTest.Instance;
-
-            //お題に沿った背景を表示
-            Debug.Log(gm.CurrentTheme.Name);
-            _background.sprite = gm.CurrentTheme.Sprite;
-
-            foreach (var item in gm.SelectedItems)
+            if (StageResult.TryTake(out StageResult result))
             {
-                Debug.Log(item.Name);
+                ShowResult(result.IsSuccess, result.Background, result.SelectedItems.Select(item => item.ItemImage).ToArray());
+                return;
             }
 
-            //成否表示
-            if (gm.Result == true)
+            GameManagerTest preview = GameManagerTest.Instance;
+            if (preview != null)
             {
-                _success.SetActive(true);
-                _failure.SetActive(false);
-                _titleButton.anchoredPosition = _success.GetComponent<RectTransform>().anchoredPosition;
-                //_result.text = "Congratulations!";
-                //_message.gameObject.SetActive(false);
-            }
-            else
-            {
-                _success.SetActive(false);
-                _failure.SetActive(true);
-                _titleButton.anchoredPosition = _failure.GetComponent<RectTransform>().anchoredPosition;
-                //_result.text = "You faild...";
-                //_message.gameObject.SetActive(true);
+                ShowResult(preview.Result, preview.CurrentTheme?.Sprite, preview.SelectedItems.Select(item => item?.Sprite).ToArray());
+                return;
             }
 
-            //選択したアイテムが3未満だったらアイテム表示枠を消す
-            for (int i = 0; i < 3 - gm.SelectedItems.Count; i++)
+            ShowResult(null, null, Array.Empty<Sprite>());
+        }
+
+        private void ShowResult(bool? isSuccess, Sprite background, IReadOnlyList<Sprite> items)
+        {
+            if (background != null)
             {
-                _items[2 - i].gameObject.SetActive(false);
+                _background.sprite = background;
             }
 
-            for (int i = 0; i < gm.SelectedItems.Count; i++)
+            _success.SetActive(isSuccess == true);
+            _failure.SetActive(isSuccess == false);
+            if (isSuccess.HasValue)
             {
-                _items[i].sprite = gm.SelectedItems[i].Sprite;
+                GameObject resultPanel = isSuccess.Value ? _success : _failure;
+                _titleButton.anchoredPosition = resultPanel.GetComponent<RectTransform>().anchoredPosition;
             }
 
-            switch (gm.SelectedItems.Count)
+            for (int i = 0; i < _items.Length; i++)
             {
-                case 0:
-                    Debug.Log("アイテムなし");
-                    break;
-
-                case 1:
-                    //_items[0].rectTransform.
-                    break;
-
-                case 2:
-                    break;
-
-                case 3:
-                    break;
-
-                default:
-                    Debug.LogWarning("想定外のアイテム数");
-                    break;
+                Sprite sprite = i < items.Count ? items[i] : null;
+                _items[i].sprite = sprite;
+                _items[i].gameObject.SetActive(sprite != null);
             }
         }
     }
