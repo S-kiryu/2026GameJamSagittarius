@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 
 /// <summary>
@@ -20,12 +21,18 @@ public class ItemCreatior : MonoBehaviour
     /// アイテムの親トランスフォームを表す。
     /// </summary>
     [SerializeField] private Transform _itemParent;
+    [SerializeField] private GridLayoutGroup _gridLayoutGroup;
 
     /// <summary>
     /// アイテム生成
     /// </summary>
     private void ItemGenerate() 
     {
-
+        _gridLayoutGroup.constraintCount = _itemDataList.Count;
+        foreach (var itemData in _itemDataList)
+        {
+            var item = Instantiate(_itemPrefab, _itemParent);
+            item.SetItemData(itemData);
+        }
     }
 }
