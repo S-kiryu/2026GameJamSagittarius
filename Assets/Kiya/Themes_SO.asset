@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be79c6c99d697c43b9ba4a3104a7ece, type: 3}
+  m_Name: Themes_SO
+  m_EditorClassIdentifier: Assembly-CSharp::Themes_SO
+  Themes:
+  - Name: 0
+    Sprite: {fileID: 21300000, guid: e814553918cedce4095b72dd073cccfd, type: 3}
+  - Name: 1
+    Sprite: {fileID: 21300000, guid: 126cca424ca2d4e44a3a9f79142b2326, type: 3}
+  - Name: 2
+    Sprite: {fileID: 21300000, guid: c79721ccb58c3ee43b9524d81d138677, type: 3}
