@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5be79c6c99d697c43b9ba4a3104a7ece, type: 3}
-  m_Name: Themes_SO
+  m_Name: Theme_SO
   m_EditorClassIdentifier: Assembly-CSharp::Themes_SO
   Themes:
   - Name: 0

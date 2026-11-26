@@ -1,17 +1,23 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ResultSceneSwitcher : MonoBehaviour
+
+namespace Kiya.Result
 {
-    public void SwitchScene(string sceneName)
+    public class ResultSceneSwitcher : MonoBehaviour
     {
-        SceneManager.LoadScene(sceneName);
-        //AsyncOperation op = SceneManager.LoadSceneAsync(sceneName);
-        //op.allowSceneActivation = true;
+        public void SwitchScene(string sceneName)
+        {
+            SceneManager.LoadScene(sceneName);
+            //AsyncOperation op = SceneManager.LoadSceneAsync(sceneName);
+            //op.allowSceneActivation = true;
+        }
+
+        public void MoveToResultScene()
+        {
+
+        }
     }
 
-    public void MoveToResultScene()
-    {
-
-    }
 }
+

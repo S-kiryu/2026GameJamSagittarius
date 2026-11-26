@@ -1,62 +1,69 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Kiya.Data;
 
-public class GameManagerTest : MonoBehaviour
+namespace Kiya.Result
 {
-    public static GameManagerTest Instance;
-
-    [SerializeField] Themes_SO _themeData;
-    [SerializeField] Items_SO _itemData;
-
-    [SerializeField] ThemeName _themeName;
-
-    public Theme CurrentTheme { get; private set; }
-    [SerializeField] List<ItemName> _selectedItems;
-    public List<Item> SelectedItems { get; private set; } = new List<Item>();
-
-    [SerializeField] bool _result = true;
-    public bool Result => _result;
-
-    void Awake()
+    public class GameManagerTest : MonoBehaviour
     {
-        if (Instance == null)
+        public static GameManagerTest Instance;
+
+        [SerializeField] Themes_SO _themeData;
+        [SerializeField] Items_SO _itemData;
+
+        [SerializeField] ThemeName _themeName;
+
+        public Theme CurrentTheme { get; private set; }
+        [SerializeField] List<ItemName> _selectedItems;
+        public List<Kiya.Data.Item> SelectedItems { get; private set; } = new List<Kiya.Data.Item>();
+
+        [SerializeField] bool _result = true;
+        public bool Result => _result;
+
+        void Awake()
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+
+            SetCurrentTheme();
+            SetItems();
         }
-        else
+
+        private void OnValidate()
         {
-            Destroy(gameObject);
+            if (_themeData == null || _itemData == null)
+                return;
+
+            SetCurrentTheme();
+            SetItems();
         }
 
-        SetCurrentTheme();
-        SetItems();
-    }
-
-    private void OnValidate()
-    {
-        SetCurrentTheme();
-        SetItems();
-    }
-
-    void SetCurrentTheme()
-    {
-        CurrentTheme = _themeData.Themes.Find(theme => theme.Name == _themeName);
-        Debug.Log($"current theme is {CurrentTheme.Name}");
-    }
-
-    void SetItems()
-    {
-        SelectedItems.Clear();
-        foreach (var item in _selectedItems)
+        void SetCurrentTheme()
         {
-            SelectedItems.Add(_itemData.Items.Find(sprite => sprite.Name == item));
+            CurrentTheme = _themeData.Themes.Find(theme => theme.Name == _themeName);
+            Debug.Log($"current theme is {CurrentTheme.Name}");
+        }
 
-            //重複を防ぐ
-            //var selectedItem = _itemData.Items.Find(sprite => sprite.Name == item);
-            //if (!SelectedItems.Contains(selectedItem))
-            //    SelectedItems.Add(selectedItem);
+        void SetItems()
+        {
+            SelectedItems.Clear();
+            foreach (var item in _selectedItems)
+            {
+                SelectedItems.Add(_itemData.Items.Find(sprite => sprite.Name == item));
+
+                //重複を防ぐ
+                //var selectedItem = _itemData.Items.Find(sprite => sprite.Name == item);
+                //if (!SelectedItems.Contains(selectedItem))
+                //    SelectedItems.Add(selectedItem);
+            }
         }
     }
 }
