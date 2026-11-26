@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// アイテムクラス
@@ -18,24 +19,53 @@ public class Item : MonoBehaviour
     /// ItemData property
     /// </summary>
     private ItemData itemData;
+    private Image image;
 
     private void Awake()
     {
+        image = GetComponent<Image>();
+
+        if (image == null)
+        {
+            Debug.LogError("イメージコンポーネントが見つかりません。");
+        }
+
         UpdateBorder();
     }
 
+    /// <summary>
+    /// 選択された時
+    /// </summary>
     public void ToggleSelection()
     {
         isSelected = !isSelected;
         UpdateBorder();
     }
 
-    private void SetItemData(ItemData data)
+    /// <summary>
+    /// データをセット
+    /// </summary>
+    /// <param name="data"></param>
+    public void SetItemData(ItemData data)
     {
         itemData = data;
+        UpdateView();
     }
 
+    /// <summary>
+    /// イメージの更新
+    /// </summary>
+    private void UpdateView() 
+    {
+        if (image != null && itemData != null)
+        {
+            image.sprite = itemData.ItemImage;
+        }
+    }
 
+    /// <summary>
+    /// ふちを更新する
+    /// </summary>
     private void UpdateBorder()
     {
         if (selectionBorder != null && selectionBorder.activeSelf != isSelected)
