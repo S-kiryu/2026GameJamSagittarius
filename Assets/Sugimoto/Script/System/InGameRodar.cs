@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /// <summary>
@@ -15,6 +16,8 @@ public class InGameRound : MonoBehaviour
     [SerializeField] private Button _readyButton;
     [SerializeField] private TMP_Text _timerText;
     [SerializeField] private TMP_Text _themeText;
+    [SerializeField] private Image _background;
+    [SerializeField] private string _GameResult;
 
     private bool _finished;
 
@@ -107,8 +110,8 @@ public class InGameRound : MonoBehaviour
         _readyButton.interactable = false;
         _timer.StopCountdown();
         UpdateTimerText();
-        StageResult.Save(isSuccess, _selection.SelectedItems);
-        Debug.Log(isSuccess ? "成功" : "失敗");
+        StageResult.Save(isSuccess, _selection.SelectedItems, _background != null ? _background.sprite : null);
+        SceneManager.LoadScene(_GameResult);
     }
 
     /// <summary>

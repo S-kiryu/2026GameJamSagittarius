@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 /// <summary>
 /// インゲームからリザルトシーンへ渡すステージ結果。
@@ -8,11 +9,13 @@ public class StageResult
 {
     public bool IsSuccess { get; }
     public IReadOnlyList<ItemData> SelectedItems { get; }
+    public Sprite Background { get; }
 
-    private StageResult(bool isSuccess, IReadOnlyList<ItemData> selectedItems)
+    private StageResult(bool isSuccess, IReadOnlyList<ItemData> selectedItems, Sprite background)
     {
         IsSuccess = isSuccess;
         SelectedItems = selectedItems;
+        Background = background;
     }
 
     /// <summary>
@@ -20,7 +23,8 @@ public class StageResult
     /// </summary>
     /// <param name="isSuccess">クリアしているかどうか</param>
     /// <param name="selectedItems">選択したアイテム</param>
-    public static void Save(bool isSuccess, IReadOnlyList<PicItem> selectedItems)
+    /// <param name="background">プレイしたステージの背景</param>
+    public static void Save(bool isSuccess, IReadOnlyList<PicItem> selectedItems, Sprite background = null)
     {
         var itemData = new ItemData[selectedItems.Count];
         for (int i = 0; i < selectedItems.Count; i++)
@@ -28,7 +32,7 @@ public class StageResult
             itemData[i] = selectedItems[i].Data;
         }
 
-        StageResultStore.Save(new StageResult(isSuccess, Array.AsReadOnly(itemData)));
+        StageResultStore.Save(new StageResult(isSuccess, Array.AsReadOnly(itemData), background));
     }
 
     public static bool TryTake(out StageResult result)
