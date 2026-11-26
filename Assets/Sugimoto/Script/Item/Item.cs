@@ -21,6 +21,9 @@ public class Item : MonoBehaviour
     [SerializeField] private Image image;
 
     private ItemData itemData;
+    private ItemClickHistory itemClickHistory;
+    internal ItemData Data => itemData;
+    public Sprite ItemSprite => itemData?.ItemImage;
 
     private void Awake()
     {
@@ -32,7 +35,12 @@ public class Item : MonoBehaviour
     /// </summary>
     public void ToggleSelection()
     {
-        isSelected = !isSelected;
+        itemClickHistory.ToggleSelection(this);
+    }
+
+    internal void SetSelected(bool selected)
+    {
+        isSelected = selected;
         UpdateBorder();
     }
 
@@ -40,9 +48,10 @@ public class Item : MonoBehaviour
     /// データをセット
     /// </summary>
     /// <param name="data"></param>
-    public void SetItemData(ItemData data)
+    public void SetItemData(ItemData data, ItemClickHistory clickHistory)
     {
         itemData = data;
+        itemClickHistory = clickHistory;
         UpdateView();
     }
 
@@ -68,6 +77,9 @@ public class Item : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// デバック関連
+    /// </summary>
 #if UNITY_EDITOR
     private void OnValidate()
     {

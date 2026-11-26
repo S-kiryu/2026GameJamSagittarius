@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -10,10 +9,6 @@ public class ItemCreatior : MonoBehaviour
 {
     [Header("アイテム生成設定")]
     /// <summary>
-    /// 生成するアイテムのリスト
-    /// </summary>
-    [SerializeField] private List<Sprite> _itemImageList;
-    /// <summary>
     /// アイテムのプレハブ
     /// </summary>
     [SerializeField] private Item _itemPrefab;
@@ -23,23 +18,24 @@ public class ItemCreatior : MonoBehaviour
     [SerializeField] private Transform _itemParent;
     [SerializeField] private GridLayoutGroup _gridLayoutGroup;
     [SerializeField] private int _itemsPerRow = 4;
-
-    private void Start()
-    {
-        ItemGenerate();
-    }
+    [SerializeField] private ItemClickHistory _itemClickHistory;
 
     /// <summary>
     /// アイテム生成
     /// </summary>
-    private void ItemGenerate() 
+    public void GenerateItems(IReadOnlyList<Sprite> itemImages)
     {
         _gridLayoutGroup.constraintCount = _itemsPerRow;
-        foreach (var Sprite in _itemImageList)
+        foreach (Sprite sprite in itemImages)
         {
+            if (sprite == null)
+            {
+                continue;
+            }
+
             var item = Instantiate(_itemPrefab, _itemParent);
-            var itemData = new ItemData(Sprite.name, Sprite);
-            item.SetItemData(itemData);
+            var itemData = new ItemData(sprite.name, sprite);
+            item.SetItemData(itemData, _itemClickHistory);
         }
     }
 }
