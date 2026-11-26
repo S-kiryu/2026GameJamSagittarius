@@ -6,11 +6,16 @@ namespace Kiya.Result
 {
     public class ResultSceneSwitcher : MonoBehaviour
     {
+        internal StageData RetryStage { get; set; }
+
         public void SwitchScene(string sceneName)
         {
+            if (sceneName == "InGame")
+            {
+                InGameRound.SelectNextStage(RetryStage);
+            }
+
             SceneManager.LoadScene(sceneName);
-            //AsyncOperation op = SceneManager.LoadSceneAsync(sceneName);
-            //op.allowSceneActivation = true;
         }
 
         public void MoveToResultScene()

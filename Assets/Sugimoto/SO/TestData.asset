@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: TestData
   m_EditorClassIdentifier: Assembly-CSharp::ThemeData
   _themeName: "\u9B54\u8A0E\u4F10\u738B"
+  _selectImage: {fileID: 21300000, guid: ae1dc7e0b35ac4f46b0254ef3a4f52ad, type: 3}
+  _resultBackgroundImage: {fileID: 0}
+  _clearCharacterImage: {fileID: 21300000, guid: 51a130135716ef34799922246bc40dde, type: 3}
+  _defeatCharacterImage: {fileID: 21300000, guid: f70ebd7e6d4a12a4aafa1955aa0b6dc7, type: 3}
   _themeImageList:
   - {fileID: 9120274773078298782, guid: 2d26d4b722bbeae459f07173bfac1d49, type: 3}
   - {fileID: -8102614841399940862, guid: 43f59a7066230b14b9c6ba093ff29a4a, type: 3}
