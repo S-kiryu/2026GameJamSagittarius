@@ -53,8 +53,8 @@ public class GameManagerTest : MonoBehaviour
         {
             SelectedItems.Add(_itemData.Items.Find(sprite => sprite.Name == item));
 
+            //重複を防ぐ
             //var selectedItem = _itemData.Items.Find(sprite => sprite.Name == item);
-
             //if (!SelectedItems.Contains(selectedItem))
             //    SelectedItems.Add(selectedItem);
         }
