@@ -16,20 +16,14 @@ public class Item : MonoBehaviour
     /// </summary>
     [SerializeField] private bool isSelected;
     /// <summary>
-    /// ItemData property
+    /// 画像イメージ
     /// </summary>
+    [SerializeField] private Image image;
+
     private ItemData itemData;
-    private Image image;
 
     private void Awake()
     {
-        image = GetComponent<Image>();
-
-        if (image == null)
-        {
-            Debug.LogError("イメージコンポーネントが見つかりません。");
-        }
-
         UpdateBorder();
     }
 

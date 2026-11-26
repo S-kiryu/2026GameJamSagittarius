@@ -3,11 +3,16 @@ using UnityEngine;
 /// <summary>
 /// アイテムのデータ
 /// </summary>
-[CreateAssetMenu(fileName = "NewItemData", menuName = "Items/Item Data")]
-public class ItemData : ScriptableObject
+public class ItemData
 {
-    [SerializeField] private string _itemName;
-    [SerializeField] private Sprite _itemImage;
+    private string _itemName;
+    private Sprite _itemImage;
+
+    public ItemData(string itemName, Sprite itemImage)
+    {
+        _itemName = itemName;
+        _itemImage = itemImage;
+    }
 
     /// <summary>
     /// アイテムの名前
