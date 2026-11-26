@@ -10,7 +10,7 @@ public class TestInGame : MonoBehaviour
 {
     [SerializeField] private Timer _timer;
     [SerializeField] private ItemClickHistory _selection;
-    [SerializeField] private ThemeData _theme;
+    [SerializeField] private StageData _theme;
     [SerializeField] private ItemCreatior _itemCreator;
     [SerializeField] private Button _readyButton;
     [SerializeField] private TMP_Text _timerText;

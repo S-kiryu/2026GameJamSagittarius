@@ -2,17 +2,17 @@ using UnityEngine;
 using System.Collections.Generic;
 
 /// <summary>
-/// お題のデータ
+/// ステージのデータ
 /// </summary>
-[CreateAssetMenu(fileName = "ThemeData", menuName = "Data/ThemeData")]
-public class ThemeData : ScriptableObject
+[CreateAssetMenu(fileName = "StageData", menuName = "Data/StageData")]
+public class StageData : ScriptableObject
 {
     /// <summary>
-    /// お題
+    /// ステージの名前
     /// </summary>
     [SerializeField] private string _themeName;
     /// <summary>
-    /// このお題に出てくるアイテム
+    /// このステージに出てくるアイテム
     /// </summary>
     [SerializeField] private List<Sprite> _themeImageList = new List<Sprite>();
     /// <summary>
