@@ -9,6 +9,7 @@ namespace Kiya.Result
     public class ResultItemManager : MonoBehaviour
     {
         [SerializeField] Image _background; //背景
+        [SerializeField] Image _characterImage; //結果に応じた人物画像
         [SerializeField] Image[] _items = new Image[3]; //選択されたアイテム
         [SerializeField] GameObject _success; //成功時のUI
         [SerializeField] GameObject _failure; //失敗時のUI
@@ -18,7 +19,18 @@ namespace Kiya.Result
         {
             if (StageResult.TryTake(out StageResult result))
             {
-                ShowResult(result.IsSuccess, result.Background, result.SelectedItems.Select(item => item.ItemImage).ToArray());
+                if (TryGetComponent(out ResultSceneSwitcher switcher))
+                {
+                    switcher.RetryStage = result.Stage;
+                }
+
+                Sprite background = result.Stage?.ResultBackgroundImage;
+                Sprite character = result.IsSuccess ? result.Stage?.ClearCharacterImage : result.Stage?.DefeatCharacterImage;
+                ShowResult(
+                    result.IsSuccess,
+                    background != null ? background : result.Background,
+                    result.SelectedItems.Select(item => item.ItemImage).ToArray(),
+                    character);
                 return;
             }
 
@@ -32,11 +44,17 @@ namespace Kiya.Result
             ShowResult(null, null, Array.Empty<Sprite>());
         }
 
-        private void ShowResult(bool? isSuccess, Sprite background, IReadOnlyList<Sprite> items)
+        private void ShowResult(bool? isSuccess, Sprite background, IReadOnlyList<Sprite> items, Sprite character = null)
         {
             if (background != null)
             {
                 _background.sprite = background;
+            }
+
+            if (_characterImage != null)
+            {
+                _characterImage.sprite = character;
+                _characterImage.enabled = character != null;
             }
 
             _success.SetActive(isSuccess == true);

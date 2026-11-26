@@ -10,12 +10,21 @@ public class StageResult
     public bool IsSuccess { get; }
     public IReadOnlyList<ItemData> SelectedItems { get; }
     public Sprite Background { get; }
+    public StageData Stage { get; }
 
-    private StageResult(bool isSuccess, IReadOnlyList<ItemData> selectedItems, Sprite background)
+    /// <summary>
+    /// 初期化処理
+    /// </summary>
+    /// <param name="isSuccess">クリアしたかどうか</param>
+    /// <param name="selectedItems">選択したアイテム</param>
+    /// <param name="background">背景</param>
+    /// <param name="stage">ステージのデータ</param>
+    private StageResult(bool isSuccess, IReadOnlyList<ItemData> selectedItems, Sprite background, StageData stage)
     {
         IsSuccess = isSuccess;
         SelectedItems = selectedItems;
         Background = background;
+        Stage = stage;
     }
 
     /// <summary>
@@ -24,7 +33,8 @@ public class StageResult
     /// <param name="isSuccess">クリアしているかどうか</param>
     /// <param name="selectedItems">選択したアイテム</param>
     /// <param name="background">プレイしたステージの背景</param>
-    public static void Save(bool isSuccess, IReadOnlyList<PicItem> selectedItems, Sprite background = null)
+    /// <param name="stage">プレイしたステージ</param>
+    public static void Save(bool isSuccess, IReadOnlyList<PicItem> selectedItems, Sprite background = null, StageData stage = null)
     {
         var itemData = new ItemData[selectedItems.Count];
         for (int i = 0; i < selectedItems.Count; i++)
@@ -32,7 +42,7 @@ public class StageResult
             itemData[i] = selectedItems[i].Data;
         }
 
-        StageResultStore.Save(new StageResult(isSuccess, Array.AsReadOnly(itemData), background));
+        StageResultStore.Save(new StageResult(isSuccess, Array.AsReadOnly(itemData), background, stage));
     }
 
     public static bool TryTake(out StageResult result)

@@ -5,24 +5,51 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /// <summary>
-/// インゲームをテストで実行するクラス
+/// インゲーム機能を実行するクラス
 /// </summary>
 public class InGameRound : MonoBehaviour
 {
+    [Header("インゲームの機能設定")]
     [SerializeField] private Timer _timer;
     [SerializeField] private ItemClickHistory _selection;
     [SerializeField] private StageData _theme;
     [SerializeField] private ItemCreatior _itemCreator;
     [SerializeField] private Button _readyButton;
+
+    [Header("テキスト関連")]
     [SerializeField] private TMP_Text _timerText;
     [SerializeField] private TMP_Text _themeText;
+
+    [Header("背景とシーン移行先")]
     [SerializeField] private Image _background;
     [SerializeField] private string _GameResult;
 
+    private static StageData _nextStage;
     private bool _finished;
+
+    /// <summary>
+    /// ステージのデータを受け取る
+    /// </summary>
+    /// <param name="stage">渡したいステージ</param>
+    internal static void SelectNextStage(StageData stage)
+    {
+        _nextStage = stage;
+    }
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    private static void ResetStageSelection()
+    {
+        _nextStage = null;
+    }
 
     private void Start()
     {
+        if (_nextStage != null)
+        {
+            _theme = _nextStage;
+            _nextStage = null;
+        }
+
         _readyButton.interactable = false;
         _itemCreator.GenerateItems(_theme.ItemImages);
         _readyButton.onClick.AddListener(Submit);
@@ -110,7 +137,7 @@ public class InGameRound : MonoBehaviour
         _readyButton.interactable = false;
         _timer.StopCountdown();
         UpdateTimerText();
-        StageResult.Save(isSuccess, _selection.SelectedItems, _background != null ? _background.sprite : null);
+        StageResult.Save(isSuccess, _selection.SelectedItems, _background != null ? _background.sprite : null, _theme);
         SceneManager.LoadScene(_GameResult);
     }
 
