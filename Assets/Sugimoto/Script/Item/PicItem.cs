@@ -4,7 +4,7 @@ using UnityEngine.UI;
 /// <summary>
 /// アイテムクラス
 /// </summary>
-public class Item : MonoBehaviour
+public class PicItem : MonoBehaviour
 {
     [Header("選択アイテムの設定")]
     /// <summary>

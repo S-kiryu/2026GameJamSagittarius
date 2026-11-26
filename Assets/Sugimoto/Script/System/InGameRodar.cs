@@ -6,7 +6,7 @@ using UnityEngine.UI;
 /// <summary>
 /// インゲームをテストで実行するクラス
 /// </summary>
-public class TestInGame : MonoBehaviour
+public class InGameRound : MonoBehaviour
 {
     [SerializeField] private Timer _timer;
     [SerializeField] private ItemClickHistory _selection;
@@ -85,7 +85,7 @@ public class TestInGame : MonoBehaviour
             return false;
         }
 
-        foreach (Item item in _selection.SelectedItems)
+        foreach (PicItem item in _selection.SelectedItems)
         {
             if (!remainingAnswers.Remove(item.ItemSprite))
             {

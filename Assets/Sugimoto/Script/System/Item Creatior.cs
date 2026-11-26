@@ -11,7 +11,7 @@ public class ItemCreatior : MonoBehaviour
     /// <summary>
     /// アイテムのプレハブ
     /// </summary>
-    [SerializeField] private Item _itemPrefab;
+    [SerializeField] private PicItem _itemPrefab;
     /// <summary>
     /// アイテムの親トランスフォームを表す。
     /// </summary>

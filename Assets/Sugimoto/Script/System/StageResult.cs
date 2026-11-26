@@ -20,7 +20,7 @@ public class StageResult
     /// </summary>
     /// <param name="isSuccess">クリアしているかどうか</param>
     /// <param name="selectedItems">選択したアイテム</param>
-    public static void Save(bool isSuccess, IReadOnlyList<Item> selectedItems)
+    public static void Save(bool isSuccess, IReadOnlyList<PicItem> selectedItems)
     {
         var itemData = new ItemData[selectedItems.Count];
         for (int i = 0; i < selectedItems.Count; i++)
