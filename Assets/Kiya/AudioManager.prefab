@@ -55,7 +55,16 @@ MonoBehaviour:
   - _clip: {fileID: 8300000, guid: 97ab9b2ed67da7c4cbf6fe76584d11d8, type: 3}
     _name: Ready
     _volume: 0.5
-  _bgmList: []
+  - _clip: {fileID: 8300000, guid: 2346b53d77491c84b892664e61b2ed0b, type: 3}
+    _name: Countdown
+    _volume: 1
+  - _clip: {fileID: 8300000, guid: 376b6282dca88ee4f9a9df5c302164eb, type: 3}
+    _name: Finish
+    _volume: 1
+  _bgmList:
+  - _clip: {fileID: 8300000, guid: 96d4e8e79645b1a44a3313c920c71f44, type: 3}
+    _name: Ingame
+    _volume: 0.8
 --- !u!1 &1782871937326889681
 GameObject:
   m_ObjectHideFlags: 0
