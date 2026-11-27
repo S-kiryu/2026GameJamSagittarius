@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class YesButton : MonoBehaviour
 {
     public string gameSceneName = "GameScene";
+    [SerializeField] private SceneLoadingScreen _loadingScreenPrefab;
 
     private AsyncOperation _sceneLoad;
 
@@ -21,10 +22,20 @@ public class YesButton : MonoBehaviour
             return;
         }
 
-        Debug.Log("シーンを移行");
-        _sceneLoad = SceneManager.LoadSceneAsync(gameSceneName);
-        if (_sceneLoad != null)
+        bool loadStarted;
+        if (_loadingScreenPrefab != null)
         {
+            loadStarted = SceneLoadingScreen.TryLoad(gameSceneName, _loadingScreenPrefab);
+        }
+        else
+        {
+            _sceneLoad = SceneManager.LoadSceneAsync(gameSceneName);
+            loadStarted = _sceneLoad != null;
+        }
+
+        if (loadStarted)
+        {
+            Debug.Log("シーンを移行");
             InGameRound.SelectNextStage(stage);
         }
     }

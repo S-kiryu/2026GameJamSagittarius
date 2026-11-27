@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e667bb300f76546b55b7c44a42500a, type: 3}
+  m_Name: Going to school
+  m_EditorClassIdentifier: Assembly-CSharp::ThemeData
+  _themeName: "\u5B66\u6821\u59CB\u307E\u3063\u3061\u3083\u3046\uFF01"
+  _selectImage: {fileID: 21300000, guid: 21fc2f6b946e95a4bbe5c60d69885444, type: 3}
+  _resultBackgroundImage: {fileID: 21300000, guid: 21fc2f6b946e95a4bbe5c60d69885444, type: 3}
+  _clearCharacterImage: {fileID: 21300000, guid: 51a130135716ef34799922246bc40dde, type: 3}
+  _defeatCharacterImage: {fileID: 21300000, guid: f70ebd7e6d4a12a4aafa1955aa0b6dc7, type: 3}
+  _themeImageList:
+  - {fileID: 21300000, guid: 96771adaf3df6c84684b4eb140fd2918, type: 3}
+  - {fileID: 21300000, guid: 0a3dba0656221d94ca7a69081b469e47, type: 3}
+  - {fileID: 21300000, guid: ff99ce924e5a200409b4489c74df670f, type: 3}
+  - {fileID: 21300000, guid: ba6f428a20069284991a130cfee07256, type: 3}
+  - {fileID: 21300000, guid: 62c0c13b31c5cdb4d97f2b7f50aabb5a, type: 3}
+  - {fileID: 21300000, guid: fb624695d8b79bd49b1fd9e2954b70f8, type: 3}
+  - {fileID: 21300000, guid: 0a3dba0656221d94ca7a69081b469e47, type: 3}
+  - {fileID: 21300000, guid: 11a5f9c7925f99a40aac7242368dabea, type: 3}
+  - {fileID: 21300000, guid: c3834d759f6d0a44fa950b628116b814, type: 3}
+  - {fileID: 21300000, guid: 4de8c332961bcd74ca7589ccab9daf49, type: 3}
+  - {fileID: 21300000, guid: e899b75e5bbc15f4591f543a16f82ab9, type: 3}
+  - {fileID: 21300000, guid: 9cee86b6511d5064b90f4aa3d00f0c8e, type: 3}
+  - {fileID: 21300000, guid: 427e73b7ab1c68f4c9c597851cda3136, type: 3}
+  - {fileID: 21300000, guid: 7c6c7bc0056881941afd8eb95c0e941a, type: 3}
+  - {fileID: 21300000, guid: b8fa161f6ca288a43bd28457b26e083c, type: 3}
+  - {fileID: 21300000, guid: 60588ceb7d8204e4b824a3c686f7638a, type: 3}
+  _correctImage:
+  - {fileID: 21300000, guid: 60588ceb7d8204e4b824a3c686f7638a, type: 3}
+  - {fileID: 21300000, guid: b8fa161f6ca288a43bd28457b26e083c, type: 3}
+  - {fileID: 21300000, guid: 7c6c7bc0056881941afd8eb95c0e941a, type: 3}
