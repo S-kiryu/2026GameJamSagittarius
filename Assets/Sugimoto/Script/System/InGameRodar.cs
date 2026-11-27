@@ -137,7 +137,7 @@ public class InGameRound : MonoBehaviour
         _readyButton.interactable = false;
         _timer.StopCountdown();
         UpdateTimerText();
-        StageResult.Save(isSuccess, _selection.SelectedItems, _background != null ? _background.sprite : null, _theme);
+        StageResult.Save(isSuccess, _selection.SelectedItems, _background != null ? _background.sprite : null, _theme, _timer.GetClearTime());
         SceneManager.LoadScene(_GameResult);
     }
 

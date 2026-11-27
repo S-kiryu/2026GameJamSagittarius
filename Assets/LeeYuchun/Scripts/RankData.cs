@@ -8,10 +8,13 @@ public class Rank
     public string name;
     public float time;
 
-    public Rank(string name, float time)
+    public string themeName;
+
+    public Rank(string name, float time, string themeName)
     {
         this.name = name;
         this.time = time;
+        this.themeName = themeName;
     }
 }
 
