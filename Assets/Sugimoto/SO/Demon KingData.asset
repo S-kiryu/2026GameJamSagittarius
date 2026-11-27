@@ -15,7 +15,7 @@ MonoBehaviour:
   _themeName: "\u7570\u4E16\u754C\u3067\u9B54\u738B\u8A0E\u4F10\uFF01\uFF1F"
   _selectImage: {fileID: 21300000, guid: 5d888dfaabefffd448710f8d6febf792, type: 3}
   _resultBackgroundImage: {fileID: 21300000, guid: 5d888dfaabefffd448710f8d6febf792, type: 3}
-  _clearCharacterImage: {fileID: 21300000, guid: 51a130135716ef34799922246bc40dde, type: 3}
+  _clearCharacterImage: {fileID: 21300000, guid: eb3bfa4a512ba154db8f8ef596bb0786, type: 3}
   _defeatCharacterImage: {fileID: 21300000, guid: f70ebd7e6d4a12a4aafa1955aa0b6dc7, type: 3}
   _themeImageList:
   - {fileID: 21300000, guid: 96771adaf3df6c84684b4eb140fd2918, type: 3}
