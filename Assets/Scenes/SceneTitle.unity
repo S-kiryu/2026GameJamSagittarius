@@ -621,6 +621,7 @@ GameObject:
   - component: {fileID: 239983279}
   - component: {fileID: 239983278}
   - component: {fileID: 239983277}
+  - component: {fileID: 239983280}
   m_Layer: 5
   m_Name: ButtonStart
   m_TagString: Untagged
@@ -704,6 +705,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 239983280}
+        m_TargetAssemblyTypeName: ButtonSE, Assembly-CSharp
+        m_MethodName: PlaySE
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &239983278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -742,6 +755,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239983275}
   m_CullTransparentMesh: 1
+--- !u!114 &239983280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239983275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e3be7541dd49248a54d68a6159f44c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSE
 --- !u!1 &242640076
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,13 +987,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 684818432}
-        m_TargetAssemblyTypeName: TitleSceneSwitcher, Assembly-CSharp
-        m_MethodName: ClosePanel
-        m_Mode: 2
+      - m_Target: {fileID: 684818431}
+        m_TargetAssemblyTypeName: SceneTitleManager, Assembly-CSharp
+        m_MethodName: OnClickClosePanelButton
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 738776047}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1369,13 +1394,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 684818432}
-        m_TargetAssemblyTypeName: TitleSceneSwitcher, Assembly-CSharp
-        m_MethodName: OpenPanel
-        m_Mode: 2
+      - m_Target: {fileID: 684818431}
+        m_TargetAssemblyTypeName: SceneTitleManager, Assembly-CSharp
+        m_MethodName: OnClickCreditButton
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1767272255}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1758,13 +1783,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 684818432}
-        m_TargetAssemblyTypeName: TitleSceneSwitcher, Assembly-CSharp
-        m_MethodName: ClosePanel
-        m_Mode: 2
+      - m_Target: {fileID: 684818431}
+        m_TargetAssemblyTypeName: SceneTitleManager, Assembly-CSharp
+        m_MethodName: OnClickClosePanelButton
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1693690266}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1913,6 +1938,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2065691154}
+        m_TargetAssemblyTypeName: ButtonSE, Assembly-CSharp
+        m_MethodName: PlaySE
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &540272247
@@ -2122,6 +2159,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2065691154}
+        m_TargetAssemblyTypeName: ButtonSE, Assembly-CSharp
+        m_MethodName: PlaySE
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &622437161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2170,7 +2219,6 @@ GameObject:
   m_Component:
   - component: {fileID: 684818430}
   - component: {fileID: 684818431}
-  - component: {fileID: 684818432}
   m_Layer: 0
   m_Name: SceneTitleManager
   m_TagString: Untagged
@@ -2208,6 +2256,7 @@ MonoBehaviour:
   titleElementsContainer: {fileID: 2029036896}
   manualPanel: {fileID: 738776048}
   creditPanel: {fileID: 1767272256}
+<<<<<<< HEAD
   rankingPanel: {fileID: 0}
 --- !u!114 &684818432
 MonoBehaviour:
@@ -2221,6 +2270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3454f8c86511a7f478b5c72662aa64ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuitGame
+=======
+  rankingPanel: {fileID: 1204181551}
+>>>>>>> efa910270bc75ed1eaa6267ab3ac37832d974f2a
 --- !u!1 &738776047
 GameObject:
   m_ObjectHideFlags: 0
@@ -2518,13 +2570,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 684818432}
-        m_TargetAssemblyTypeName: TitleSceneSwitcher, Assembly-CSharp
-        m_MethodName: OpenPanel
-        m_Mode: 2
+      - m_Target: {fileID: 684818431}
+        m_TargetAssemblyTypeName: SceneTitleManager, Assembly-CSharp
+        m_MethodName: OnClickManualButton
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 738776047}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2568,6 +2620,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780697533}
   m_CullTransparentMesh: 1
+--- !u!1001 &802106850
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 287005942569476705, guid: 0deb440dcedd6574f86a5a0ac4cbd87d, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481180186079946358, guid: 0deb440dcedd6574f86a5a0ac4cbd87d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 773.099
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481180186079946358, guid: 0deb440dcedd6574f86a5a0ac4cbd87d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 487.69043
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481180186079946358, guid: 0deb440dcedd6574f86a5a0ac4cbd87d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481180186079946358, guid: 0deb440dcedd6574f86a5a0ac4cbd87d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481180186079946358, guid: 0deb440dcedd6574f86a5a0ac4cbd87d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481180186079946358, guid: 0deb440dcedd6574f86a5a0ac4cbd87d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481180186079946358, guid: 0deb440dcedd6574f86a5a0ac4cbd87d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481180186079946358, guid: 0deb440dcedd6574f86a5a0ac4cbd87d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481180186079946358, guid: 0deb440dcedd6574f86a5a0ac4cbd87d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481180186079946358, guid: 0deb440dcedd6574f86a5a0ac4cbd87d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0deb440dcedd6574f86a5a0ac4cbd87d, type: 3}
 --- !u!1 &914399361
 GameObject:
   m_ObjectHideFlags: 0
@@ -3095,13 +3204,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 684818432}
-        m_TargetAssemblyTypeName: TitleSceneSwitcher, Assembly-CSharp
-        m_MethodName: OpenPanel
-        m_Mode: 2
+      - m_Target: {fileID: 684818431}
+        m_TargetAssemblyTypeName: SceneTitleManager, Assembly-CSharp
+        m_MethodName: OnClickRankingButton
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1693690266}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3303,13 +3412,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 684818432}
-        m_TargetAssemblyTypeName: TitleSceneSwitcher, Assembly-CSharp
-        m_MethodName: ClosePanel
-        m_Mode: 2
+      - m_Target: {fileID: 684818431}
+        m_TargetAssemblyTypeName: SceneTitleManager, Assembly-CSharp
+        m_MethodName: OnClickClosePanelButton
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1767272255}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3924,9 +4033,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 684818432}
-        m_TargetAssemblyTypeName: TitleSceneSwitcher, Assembly-CSharp
-        m_MethodName: QuitGame
+      - m_Target: {fileID: 684818431}
+        m_TargetAssemblyTypeName: SceneTitleManager, Assembly-CSharp
+        m_MethodName: OnClickCloseGameButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4620,6 +4729,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2065691153}
+  - component: {fileID: 2065691154}
   m_Layer: 0
   m_Name: StageSelect
   m_TagString: Untagged
@@ -4650,6 +4760,18 @@ RectTransform:
   m_AnchoredPosition: {x: -214.07703, y: 121.53528}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2065691154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065691152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e3be7541dd49248a54d68a6159f44c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSE
 --- !u!1 &2116691202
 GameObject:
   m_ObjectHideFlags: 0
@@ -4757,6 +4879,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2065691154}
+        m_TargetAssemblyTypeName: ButtonSE, Assembly-CSharp
+        m_MethodName: PlaySE
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Ready
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2116691206
@@ -4943,3 +5077,4 @@ SceneRoots:
   - {fileID: 74887938}
   - {fileID: 684818430}
   - {fileID: 423025271}
+  - {fileID: 802106850}

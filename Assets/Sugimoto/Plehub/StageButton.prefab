@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 8674241651103190849}
   - component: {fileID: 8802164394473417118}
   - component: {fileID: 8357228045996135128}
+  - component: {fileID: 7058549755338093224}
   m_Layer: 5
   m_Name: StageButton
   m_TagString: Untagged
@@ -258,7 +259,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8674241651103190849}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7058549755338093224}
+        m_TargetAssemblyTypeName: ButtonSE, Assembly-CSharp
+        m_MethodName: PlaySE
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8357228045996135128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,3 +286,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StageButton
   _stageData: {fileID: 11400000, guid: bc82b2ae73cd23d4592db5a9887028d6, type: 2}
   _detailPanel: {fileID: 0}
+--- !u!114 &7058549755338093224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635851953036427535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e3be7541dd49248a54d68a6159f44c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSE
