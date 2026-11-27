@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e667bb300f76546b55b7c44a42500a, type: 3}
   m_Name: zonbi
   m_EditorClassIdentifier: Assembly-CSharp::ThemeData
-  _themeName: "\u9593\u306B\u5408\u3048\uFF01\u5929\u4F53\u89B3\u6E2C\uFF01"
-  _selectImage: {fileID: 21300000, guid: b68ec7a3281ef6f4d87e69a2e3803599, type: 3}
-  _resultBackgroundImage: {fileID: 21300000, guid: b68ec7a3281ef6f4d87e69a2e3803599, type: 3}
+  _themeName: "\u30BE\u30F3\u30D3\u30D1\u30CB\u30C3\u30AF\uFF01\uFF1F"
+  _selectImage: {fileID: 21300000, guid: 21fc2f6b946e95a4bbe5c60d69885444, type: 3}
+  _resultBackgroundImage: {fileID: 21300000, guid: 21fc2f6b946e95a4bbe5c60d69885444, type: 3}
   _clearCharacterImage: {fileID: 21300000, guid: 51a130135716ef34799922246bc40dde, type: 3}
   _defeatCharacterImage: {fileID: 21300000, guid: f70ebd7e6d4a12a4aafa1955aa0b6dc7, type: 3}
   _themeImageList:
