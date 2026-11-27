@@ -21,6 +21,8 @@ public class InGameCountDown : MonoBehaviour
         _countDownBackGround.gameObject.SetActive(true);
         _countDownText.gameObject.SetActive(true);
 
+        AudioManager.Instance.PlaySE("Countdown");
+
         for(int i = 3;  i >= 1; i--)
         {
             _countDownText.SetText("{0}", i);
@@ -32,6 +34,8 @@ public class InGameCountDown : MonoBehaviour
 
         _countDownText.gameObject.SetActive(false);
         _countDownBackGround.gameObject.SetActive(false);
+
+        AudioManager.Instance.PlayBGM("Ingame");
 
         //タイマー開始
         _timer.StartCountdown();

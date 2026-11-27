@@ -100,6 +100,7 @@ public class InGameRound : MonoBehaviour
             return;
         }
 
+        AudioManager.Instance.PlaySE("Ready");
         Finish(HasCorrectSelection());
     }
 
@@ -134,6 +135,8 @@ public class InGameRound : MonoBehaviour
     /// <param name="isSuccess"></param>
     private void Finish(bool isSuccess)
     {
+        AudioManager.Instance.Stop();
+
         _finished = true;
         _selection.InputLocked = true;
         _readyButton.interactable = false;
