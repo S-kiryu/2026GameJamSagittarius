@@ -3178,6 +3178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04870504527e9b048aa50a4f4d9baa24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResultSceneSwitcher
+  _loadingScreenPrefab: {fileID: 114005, guid: 4f9b8fc4c132412b9baef9ef97a933d9, type: 3}
 --- !u!114 &1854968978
 MonoBehaviour:
   m_ObjectHideFlags: 0
