@@ -53,6 +53,19 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public float GetSELength(string name)
+    {
+        foreach (var se in _seList)
+        {
+            if (se.Name == name)
+            {
+                return se.Clip.length;
+            }
+        }
+
+        return 0f;
+    }
+
     /// <summary>
     ///     BGM再生(ループ)
     /// </summary>
