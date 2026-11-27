@@ -14,7 +14,7 @@ namespace Kiya.Result
         [SerializeField] GameObject _success; //成功時のUI
         [SerializeField] GameObject _failure; //失敗時のUI
         [SerializeField] RectTransform _titleButton; //タイトル画面へ移動するボタン
-
+        [SerializeField] RankManager _rankManager;
         private void Start()
         {
             if (StageResult.TryTake(out StageResult result))
@@ -31,6 +31,7 @@ namespace Kiya.Result
                     background != null ? background : result.Background,
                     result.SelectedItems.Select(item => item.ItemImage).ToArray(),
                     character);
+                _rankManager.HandleStageResult(result);
                 return;
             }
 
