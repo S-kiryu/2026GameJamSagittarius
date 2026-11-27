@@ -13,6 +13,7 @@ public class SceneTitleManager : MonoBehaviour
         ToggleManual(false);
         ToggleCredit(false);
         ToggleRanking(false);
+        AudioManager.Instance.PlayBGM("Title");
     }
 
     public void OnClickStartButton()
