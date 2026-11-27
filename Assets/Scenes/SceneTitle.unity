@@ -645,7 +645,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 53, y: -450}
+  m_AnchoredPosition: {x: 31, y: -409}
   m_SizeDelta: {x: 505, y: 182}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &239983277
@@ -1630,7 +1630,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 320, y: 180}
-  m_Spacing: {x: 100, y: 100}
+  m_Spacing: {x: 150, y: 160}
   m_Constraint: 1
   m_ConstraintCount: 3
 --- !u!224 &454859478
@@ -2208,6 +2208,7 @@ MonoBehaviour:
   titleElementsContainer: {fileID: 2029036896}
   manualPanel: {fileID: 738776048}
   creditPanel: {fileID: 1767272256}
+  rankingPanel: {fileID: 0}
 --- !u!114 &684818432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3858,7 +3859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1757158785
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4625,7 +4626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2065691153
 RectTransform:
   m_ObjectHideFlags: 0
