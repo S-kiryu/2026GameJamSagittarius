@@ -131,7 +131,6 @@ public class RankManager : MonoBehaviour
 
     public void OnSubmitRankName(string name)
     {
-        Debug.Log("Name:" + name);
         InsertRank(new Rank(name, newRankClearTimer, newRankThemeName));
         ToggleNewRankInput(false);
     }
