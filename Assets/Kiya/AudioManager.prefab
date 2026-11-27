@@ -71,6 +71,9 @@ MonoBehaviour:
   - _clip: {fileID: 8300000, guid: 96d4e8e79645b1a44a3313c920c71f44, type: 3}
     _name: Ingame
     _volume: 0.8
+  - _clip: {fileID: 8300000, guid: a72918fb11d94c74998ec0d1c2a79220, type: 3}
+    _name: Title
+    _volume: 1
 --- !u!1 &1782871937326889681
 GameObject:
   m_ObjectHideFlags: 0
