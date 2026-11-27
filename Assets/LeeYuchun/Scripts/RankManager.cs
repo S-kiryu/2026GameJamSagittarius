@@ -8,7 +8,7 @@ using UnityEngine;
 public class RankManager : MonoBehaviour
 {
     private static string filePath;
-    private const int MAX_RANK_NUM = 10;
+    public const int MAX_RANK_NUM = 10;
 
     private float newRankClearTimer;
     private string newRankThemeName;
@@ -21,17 +21,12 @@ public class RankManager : MonoBehaviour
 
     private void ShowClearTimer(float timer)
     {
-        clearTimerText.text = "残り時間：　" + Timer.FormatTime(timer);
+        clearTimerText.text = "時間：" + Timer.FormatTime(timer);
     }
 
-
-    private void Awake()
-    {
-        filePath = Path.Combine(Application.persistentDataPath, "ranking.json");
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        filePath = Path.Combine(Application.persistentDataPath, "ranking.json");
         ToggleNewRankInput(false);
     }
 
