@@ -10,17 +10,14 @@ namespace Kiya.Result
 
         public void SwitchScene(string sceneName)
         {
+            AudioManager.Instance.PlaySE("Click");
+
             if (sceneName == "InGame")
             {
                 InGameRound.SelectNextStage(RetryStage);
             }
 
             SceneManager.LoadScene(sceneName);
-        }
-
-        public void MoveToResultScene()
-        {
-
         }
     }
 
