@@ -10,7 +10,8 @@ public class StageDetailPanel : MonoBehaviour
     /// <summary>
     /// ステージのイメージ
     /// </summary>
-    [SerializeField]private Image stageImage;
+    [SerializeField] private Image stageImage;
+    [SerializeField] private TMP_Text TitleText;
     public StageData SelectedStage { get; private set; }
 
     /// <summary>
@@ -25,10 +26,9 @@ public class StageDetailPanel : MonoBehaviour
         stageImage.preserveAspect = true;
         stageImage.enabled = stage.SelectImage != null;
 
-        TMP_Text title = transform.Find("StageTitle")?.GetComponent<TMP_Text>();
-        if (title != null)
+        if (TitleText != null)
         {
-            title.SetText(stage.ThemeName);
+            TitleText.SetText(stage.ThemeName);
         }
 
         gameObject.SetActive(true);
