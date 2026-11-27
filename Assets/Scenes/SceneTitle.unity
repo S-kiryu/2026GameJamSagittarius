@@ -1564,11 +1564,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1928965637878846444, guid: 9441870214d34e1418607bb5e96a0897, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -108.0517
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1928965637878846444, guid: 9441870214d34e1418607bb5e96a0897, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 654.2327
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1928965637878846444, guid: 9441870214d34e1418607bb5e96a0897, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1667,8 +1667,12 @@ MonoBehaviour:
   _stageButtonPrefab: {fileID: 8357228045996135128, guid: 9441870214d34e1418607bb5e96a0897, type: 3}
   _stages:
   - {fileID: 11400000, guid: bc82b2ae73cd23d4592db5a9887028d6, type: 2}
-  - {fileID: 11400000, guid: ac4a14f0b2d7e0445afb993bd2d8043a, type: 2}
   - {fileID: 11400000, guid: d0e86521fd2fac94ba71da820321e665, type: 2}
+  - {fileID: 11400000, guid: ac4a14f0b2d7e0445afb993bd2d8043a, type: 2}
+  - {fileID: 11400000, guid: 593087919a8e57440817d3e35aacd468, type: 2}
+  - {fileID: 11400000, guid: a885456338023df4db9dccf64c1522de, type: 2}
+  - {fileID: 11400000, guid: 8943998c33c3a5b49b9ac62ccde10a4a, type: 2}
+  - {fileID: 11400000, guid: 29f9a63b84863de4db7982184074927c, type: 2}
   _detailPanel: {fileID: 952202211}
   _backButton: {fileID: 622437158}
 --- !u!1 &524360631
