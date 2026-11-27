@@ -19,7 +19,7 @@ MonoBehaviour:
   _defeatCharacterImage: {fileID: 798281008451067728, guid: 00fbc9428bfa9ad4ba5969f739a23b03, type: 3}
   _themeImageList:
   - {fileID: 21300000, guid: 96771adaf3df6c84684b4eb140fd2918, type: 3}
-  - {fileID: 21300000, guid: 0a3dba0656221d94ca7a69081b469e47, type: 3}
+  - {fileID: 21300000, guid: 5f47abce78ac03d49adff3ee4a706298, type: 3}
   - {fileID: 21300000, guid: ff99ce924e5a200409b4489c74df670f, type: 3}
   - {fileID: 21300000, guid: ba6f428a20069284991a130cfee07256, type: 3}
   - {fileID: 21300000, guid: 62c0c13b31c5cdb4d97f2b7f50aabb5a, type: 3}
