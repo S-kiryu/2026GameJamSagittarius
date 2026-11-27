@@ -16,7 +16,7 @@ MonoBehaviour:
   _selectImage: {fileID: 21300000, guid: 67b046826280b1948bbb664f655c3757, type: 3}
   _resultBackgroundImage: {fileID: 21300000, guid: 67b046826280b1948bbb664f655c3757, type: 3}
   _clearCharacterImage: {fileID: 21300000, guid: 6e64b9a967e6c68438425a962aad89ee, type: 3}
-  _defeatCharacterImage: {fileID: 21300000, guid: f70ebd7e6d4a12a4aafa1955aa0b6dc7, type: 3}
+  _defeatCharacterImage: {fileID: 798281008451067728, guid: 00fbc9428bfa9ad4ba5969f739a23b03, type: 3}
   _themeImageList:
   - {fileID: 21300000, guid: 96771adaf3df6c84684b4eb140fd2918, type: 3}
   - {fileID: 21300000, guid: d7bd66d73b0bc684aaab931ba3aadc7d, type: 3}
