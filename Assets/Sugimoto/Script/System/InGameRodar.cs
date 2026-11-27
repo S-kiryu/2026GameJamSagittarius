@@ -44,7 +44,7 @@ public class InGameRound : MonoBehaviour
         _nextStage = null;
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
         if (_nextStage != null)
         {
@@ -53,12 +53,12 @@ public class InGameRound : MonoBehaviour
         }
 
         _readyButton.interactable = false;
-        _itemCreator.GenerateItems(_theme.ItemImages);
         _readyButton.onClick.AddListener(Submit);
-        //_timer.StartCountdown();
         _themeText.SetText(_theme.ThemeName);
         UpdateTimerText();
-        StartCoroutine(_countDown.StartCountDown());
+
+        yield return _countDown.StartCountDown();
+        _itemCreator.GenerateItems(_theme.ItemImages);
     }
 
     private void Update()

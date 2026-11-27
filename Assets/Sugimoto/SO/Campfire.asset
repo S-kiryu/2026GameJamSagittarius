@@ -19,7 +19,7 @@ MonoBehaviour:
   _defeatCharacterImage: {fileID: 798281008451067728, guid: 00fbc9428bfa9ad4ba5969f739a23b03, type: 3}
   _themeImageList:
   - {fileID: 21300000, guid: 96771adaf3df6c84684b4eb140fd2918, type: 3}
-  - {fileID: 21300000, guid: d7bd66d73b0bc684aaab931ba3aadc7d, type: 3}
+  - {fileID: 21300000, guid: c9b7183418e65bb4eb9763d04181f147, type: 3}
   - {fileID: 21300000, guid: ff99ce924e5a200409b4489c74df670f, type: 3}
   - {fileID: 21300000, guid: ba6f428a20069284991a130cfee07256, type: 3}
   - {fileID: 21300000, guid: 62c0c13b31c5cdb4d97f2b7f50aabb5a, type: 3}
@@ -32,7 +32,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9cee86b6511d5064b90f4aa3d00f0c8e, type: 3}
   - {fileID: 21300000, guid: 3faefa98c8c58474a823eb7e07ef5974, type: 3}
   - {fileID: 21300000, guid: 3984d7cb835fae94cb5268d8576f1a45, type: 3}
-  - {fileID: 21300000, guid: b64eba8a596043341862253f306c7bce, type: 3}
+  - {fileID: 21300000, guid: d7bd66d73b0bc684aaab931ba3aadc7d, type: 3}
   - {fileID: 21300000, guid: f7b7bcaa3388a23458d0a229a4e07fdf, type: 3}
   _correctImage:
   - {fileID: 21300000, guid: 9cee86b6511d5064b90f4aa3d00f0c8e, type: 3}
