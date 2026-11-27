@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 /// <summary>
@@ -30,5 +31,16 @@ public class Timer : MonoBehaviour
     {
         _stoppedSeconds = RemainingSeconds;
         _isRunning = false;
+    }
+
+    public float GetClearTime()
+    {
+        return _stoppedSeconds;
+    }
+
+    public static string FormatTime(float time)
+    {
+        TimeSpan timeSpan = TimeSpan.FromSeconds(time);
+        return timeSpan.ToString(@"ss\.fff");
     }
 }
