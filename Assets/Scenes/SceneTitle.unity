@@ -2331,7 +2331,7 @@ MonoBehaviour:
   titleElementsContainer: {fileID: 2029036896}
   manualPanel: {fileID: 738776048}
   creditPanel: {fileID: 1767272256}
-  rankingPanel: {fileID: 1204181551}
+  rankingPanel: {fileID: 1693690267}
 --- !u!1 &738776047
 GameObject:
   m_ObjectHideFlags: 0
