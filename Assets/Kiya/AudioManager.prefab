@@ -49,10 +49,10 @@ MonoBehaviour:
   _sePlayer: {fileID: 488832111613663708}
   _bgmPlayer: {fileID: 7008172765685184219}
   _seList:
-  - _clip: {fileID: 8300000, guid: 78281f311a0509644a6f23d79f0f70c9, type: 3}
+  - _clip: {fileID: 8300000, guid: 0429abfeeb7a7114ca6c20151745d8bb, type: 3}
     _name: Click
     _volume: 1
-  - _clip: {fileID: 8300000, guid: 97ab9b2ed67da7c4cbf6fe76584d11d8, type: 3}
+  - _clip: {fileID: 8300000, guid: 2e24788e9b68bb54fa361a242c2dedb0, type: 3}
     _name: Ready
     _volume: 0.5
   - _clip: {fileID: 8300000, guid: 2346b53d77491c84b892664e61b2ed0b, type: 3}
@@ -73,7 +73,7 @@ MonoBehaviour:
     _volume: 0.8
   - _clip: {fileID: 8300000, guid: a72918fb11d94c74998ec0d1c2a79220, type: 3}
     _name: Title
-    _volume: 1
+    _volume: 0.8
 --- !u!1 &1782871937326889681
 GameObject:
   m_ObjectHideFlags: 0
