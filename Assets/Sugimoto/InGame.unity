@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &135321708
 RectTransform:
   m_ObjectHideFlags: 0
@@ -790,7 +790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InGameCountDown
   _countDownText: {fileID: 2138843584}
   _timer: {fileID: 579309553}
-  _countDownBackGround: {fileID: 0}
+  _countDownBackGround: {fileID: 135321709}
 --- !u!1 &1131137458
 GameObject:
   m_ObjectHideFlags: 0
