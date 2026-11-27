@@ -27,6 +27,9 @@ public class SceneTitleManager : MonoBehaviour
         ToggleManual(false);
         ToggleCredit(false);
         ToggleRanking(false);
+<<<<<<< HEAD
+        AudioManager.Instance.PlayBGM("Title");
+=======
 
         if (_openStageSelectOnNextLoad)
         {
@@ -36,6 +39,7 @@ public class SceneTitleManager : MonoBehaviour
                 stageSelectPanel.SetActive(true);
             }
         }
+>>>>>>> 20879431e2d2486b0a4a412595053efcd0d6d679
     }
 
     public void OnClickStartButton()

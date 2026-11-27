@@ -35,6 +35,7 @@ public class YesButton : MonoBehaviour
 
         if (loadStarted)
         {
+            AudioManager.Instance.Stop();
             Debug.Log("シーンを移行");
             InGameRound.SelectNextStage(stage);
         }
