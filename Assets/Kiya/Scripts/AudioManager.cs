@@ -72,10 +72,16 @@ public class AudioManager : MonoBehaviour
     /// <param name="name"></param>
     public void PlayBGM(string name)
     {
+        Debug.Log($"PlayBGM {name}");
+        Debug.Log(_bgmPlayer.clip);
+        Debug.Log(_bgmPlayer.isPlaying);
+
         foreach (var bgm in _bgmList)
         {
             if (bgm.Name == name)
             {
+                _bgmPlayer.Stop();
+
                 if (_bgmPlayer.clip == bgm.Clip && _bgmPlayer.isPlaying)
                     return;
 
@@ -138,6 +144,6 @@ public class AudioManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         _bgmPlayer = GetComponentInChildren<AudioSource>();
-        PlayBGM("BGM");
+        //PlayBGM("BGM");
     }
 }
