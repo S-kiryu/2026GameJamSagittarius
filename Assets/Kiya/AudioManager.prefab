@@ -61,6 +61,12 @@ MonoBehaviour:
   - _clip: {fileID: 8300000, guid: 376b6282dca88ee4f9a9df5c302164eb, type: 3}
     _name: Finish
     _volume: 1
+  - _clip: {fileID: 8300000, guid: 3f6456ead9fef3542afc6c789b41a713, type: 3}
+    _name: Success
+    _volume: 1
+  - _clip: {fileID: 8300000, guid: 569042f34d897494a9ff007faae9d66c, type: 3}
+    _name: Failure
+    _volume: 1
   _bgmList:
   - _clip: {fileID: 8300000, guid: 96d4e8e79645b1a44a3313c920c71f44, type: 3}
     _name: Ingame

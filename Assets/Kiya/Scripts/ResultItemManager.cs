@@ -24,6 +24,8 @@ namespace Kiya.Result
                     switcher.RetryStage = result.Stage;
                 }
 
+                AudioManager.Instance.PlaySE(result.IsSuccess ? "Success" : "Failure");
+
                 Sprite background = result.Stage?.ResultBackgroundImage;
                 Sprite character = result.IsSuccess ? result.Stage?.ClearCharacterImage : result.Stage?.DefeatCharacterImage;
                 ShowResult(
