@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -100,7 +101,9 @@ public class InGameRound : MonoBehaviour
             return;
         }
 
-        Finish(HasCorrectSelection());
+        //Finish(HasCorrectSelection());
+        bool hasCorrectSelection = HasCorrectSelection();
+        StartCoroutine(FinishRoutine(hasCorrectSelection));
     }
 
     /// <summary>
@@ -134,12 +137,33 @@ public class InGameRound : MonoBehaviour
     /// <param name="isSuccess"></param>
     private void Finish(bool isSuccess)
     {
+        AudioManager.Instance.Stop();
+
         _finished = true;
         _selection.InputLocked = true;
         _readyButton.interactable = false;
         _timer.StopCountdown();
         UpdateTimerText();
         StageResult.Save(isSuccess, _selection.SelectedItems, _background != null ? _background.sprite : null, _theme, _timer.GetClearTime());
+        SceneManager.LoadScene(_GameResult);
+
+    }
+
+    private IEnumerator FinishRoutine(bool isSuccess)
+    {
+        _finished = true;
+        _selection.InputLocked = true;
+        _readyButton.interactable = false;
+        _timer.StopCountdown();
+        UpdateTimerText();
+        StageResult.Save(isSuccess, _selection.SelectedItems, _background != null ? _background.sprite : null, _theme, _timer.GetClearTime());
+
+        AudioManager.Instance.PlaySE("Ready");
+
+        yield return new WaitForSeconds(AudioManager.Instance.GetSELength("Ready"));
+
+        AudioManager.Instance.Stop();
+
         SceneManager.LoadScene(_GameResult);
     }
 

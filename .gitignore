@@ -139,7 +139,10 @@ crashlytics-build.properties
 
 Assets/Kiya/Sprites/Test/*.*
 Assets/Kiya/Sprites/*.*
+<<<<<<< HEAD
 Assets/Kiya/Audio/*.*
+=======
 Assets/Sugimoto/Image/*
 Assets/TextMesh Pro/ipagp00303/*
 Assets/TextMesh Pro/ipagp00303.meta
+>>>>>>> cd547b3f93fb34e1df9171e980d3531db7b19902

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
+using UnityEngine.UI;
 
 /// <summary>
 /// ゲーム開始前のカウントダウン
@@ -9,6 +10,7 @@ public class InGameCountDown : MonoBehaviour
 {
     [SerializeField] private TMP_Text _countDownText;
     [SerializeField] private Timer _timer;
+    [SerializeField] private Image _countDownBackGround;
 
     /// <summary>
     /// カウントダウン
@@ -16,7 +18,10 @@ public class InGameCountDown : MonoBehaviour
     /// <returns></returns>
     public IEnumerator StartCountDown()
     {
+        _countDownBackGround.gameObject.SetActive(true);
         _countDownText.gameObject.SetActive(true);
+
+        AudioManager.Instance.PlaySE("Countdown");
 
         for(int i = 3;  i >= 1; i--)
         {
@@ -28,6 +33,9 @@ public class InGameCountDown : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         _countDownText.gameObject.SetActive(false);
+        _countDownBackGround.gameObject.SetActive(false);
+
+        AudioManager.Instance.PlayBGM("Ingame");
 
         //タイマー開始
         _timer.StartCountdown();
