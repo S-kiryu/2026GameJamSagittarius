@@ -6,11 +6,13 @@ public class SceneTitleManager : MonoBehaviour
     [SerializeField] private Transform titleElementsContainer;
     [SerializeField] private Transform manualPanel;
     [SerializeField] private Transform creditPanel;
+    [SerializeField] private Transform rankingPanel;
 
     public void Start()
     {
         ToggleManual(false);
         ToggleCredit(false);
+        ToggleRanking(false);
     }
 
     public void OnClickStartButton()
@@ -21,18 +23,28 @@ public class SceneTitleManager : MonoBehaviour
 
     public void OnClickManualButton()
     {
+        AudioManager.Instance.PlaySE("Click");
         ToggleManual(true);
     }
 
     public void OnClickCreditButton()
     {
+        AudioManager.Instance.PlaySE("Click");
         ToggleCredit(true);
+    }
+
+    public void OnClickRankingButton()
+    {
+        AudioManager.Instance.PlaySE("Click");
+        ToggleRanking(true);
     }
 
     public void OnClickClosePanelButton()
     {
+        AudioManager.Instance.PlaySE("Click");
         ToggleManual(false);
         ToggleCredit(false);
+        ToggleRanking(false);
     }
 
     public void OnClickCloseGameButton()
@@ -49,6 +61,12 @@ public class SceneTitleManager : MonoBehaviour
     private void ToggleCredit(bool visible)
     {
         creditPanel.gameObject.SetActive(visible);
+        titleElementsContainer.gameObject.SetActive(!visible);
+    }
+
+    private void ToggleRanking(bool visible)
+    {
+        rankingPanel.gameObject.SetActive(visible);
         titleElementsContainer.gameObject.SetActive(!visible);
     }
 }
