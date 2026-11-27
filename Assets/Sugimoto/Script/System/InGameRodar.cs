@@ -15,6 +15,7 @@ public class InGameRound : MonoBehaviour
     [SerializeField] private StageData _theme;
     [SerializeField] private ItemCreatior _itemCreator;
     [SerializeField] private Button _readyButton;
+    [SerializeField] private InGameCountDown _countDown;
 
     [Header("テキスト関連")]
     [SerializeField] private TMP_Text _timerText;
@@ -53,9 +54,10 @@ public class InGameRound : MonoBehaviour
         _readyButton.interactable = false;
         _itemCreator.GenerateItems(_theme.ItemImages);
         _readyButton.onClick.AddListener(Submit);
-        _timer.StartCountdown();
+        //_timer.StartCountdown();
         _themeText.SetText(_theme.ThemeName);
         UpdateTimerText();
+        StartCoroutine(_countDown.StartCountDown());
     }
 
     private void Update()
