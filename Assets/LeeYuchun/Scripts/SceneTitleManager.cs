@@ -7,12 +7,35 @@ public class SceneTitleManager : MonoBehaviour
     [SerializeField] private Transform manualPanel;
     [SerializeField] private Transform creditPanel;
     [SerializeField] private Transform rankingPanel;
+    [SerializeField] private GameObject stageSelectPanel;
+
+    private static bool _openStageSelectOnNextLoad;
+
+    internal static void OpenStageSelectOnNextLoad()
+    {
+        _openStageSelectOnNextLoad = true;
+    }
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    private static void ResetStageSelectRequest()
+    {
+        _openStageSelectOnNextLoad = false;
+    }
 
     public void Start()
     {
         ToggleManual(false);
         ToggleCredit(false);
         ToggleRanking(false);
+
+        if (_openStageSelectOnNextLoad)
+        {
+            _openStageSelectOnNextLoad = false;
+            if (stageSelectPanel != null)
+            {
+                stageSelectPanel.SetActive(true);
+            }
+        }
     }
 
     public void OnClickStartButton()
