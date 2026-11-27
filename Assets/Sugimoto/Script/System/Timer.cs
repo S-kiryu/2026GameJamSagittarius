@@ -40,7 +40,8 @@ public class Timer : MonoBehaviour
 
     public static string FormatTime(float time)
     {
-        TimeSpan timeSpan = TimeSpan.FromSeconds(time);
+        // ランク記録は残り時間ですが、表示する時にクリアタイムを変換する。
+        TimeSpan timeSpan = TimeSpan.FromSeconds(Duration - time);
         return timeSpan.ToString(@"ss\.fff");
     }
 }
