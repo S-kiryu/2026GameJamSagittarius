@@ -163,6 +163,7 @@ public class PicItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
         if (image != null && itemData != null)
         {
             image.sprite = itemData.ItemImage;
+            UpdateBorder();
         }
     }
 
@@ -171,7 +172,17 @@ public class PicItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
     /// </summary>
     private void UpdateBorder()
     {
-        if (selectionBorder != null && selectionBorder.activeSelf != isSelected)
+        if (selectionBorder == null)
+        {
+            return;
+        }
+
+        if (isSelected && image != null && selectionBorder.TryGetComponent(out Image borderImage))
+        {
+            borderImage.sprite = image.overrideSprite;
+        }
+
+        if (selectionBorder.activeSelf != isSelected)
         {
             selectionBorder.SetActive(isSelected);
         }
