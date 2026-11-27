@@ -10,7 +10,11 @@ namespace Kiya.Result
 
         public void SwitchScene(string sceneName)
         {
-            AudioManager.Instance.PlaySE("Click");
+            AudioManager audioManager = AudioManager.Instance;
+            if (audioManager != null)
+            {
+                audioManager.PlaySE("Click");
+            }
 
             if (sceneName == "InGame")
             {
