@@ -1807,7 +1807,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 219927871}
-  m_Father: {fileID: 1693690267}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3658,11 +3658,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660986760}
   m_CullTransparentMesh: 1
---- !u!1 &1693690266 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2092971091514851478, guid: a67b108a453a8f84badc84d32bda3ef7, type: 3}
-  m_PrefabInstance: {fileID: 7684436725645936631}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1693690267 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3233164297345012639, guid: a67b108a453a8f84badc84d32bda3ef7, type: 3}
@@ -5057,9 +5052,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5123294797940245898, guid: a67b108a453a8f84badc84d32bda3ef7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5123294797940245898, guid: a67b108a453a8f84badc84d32bda3ef7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 684818432}
+      objectReference: {fileID: 684818431}
+    - target: {fileID: 5123294797940245898, guid: a67b108a453a8f84badc84d32bda3ef7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickClosePanelButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5123294797940245898, guid: a67b108a453a8f84badc84d32bda3ef7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneTitleManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5123294797940245898, guid: a67b108a453a8f84badc84d32bda3ef7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5123294797940245898, guid: a67b108a453a8f84badc84d32bda3ef7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6498134528476085256, guid: a67b108a453a8f84badc84d32bda3ef7, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -5099,3 +5114,4 @@ SceneRoots:
   - {fileID: 684818430}
   - {fileID: 423025271}
   - {fileID: 802106850}
+  - {fileID: 524360632}
