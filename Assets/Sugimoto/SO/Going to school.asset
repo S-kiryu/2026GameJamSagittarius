@@ -15,11 +15,11 @@ MonoBehaviour:
   _themeName: "\u5B66\u6821\u59CB\u307E\u3063\u3061\u3083\u3046\uFF01"
   _selectImage: {fileID: 21300000, guid: 21fc2f6b946e95a4bbe5c60d69885444, type: 3}
   _resultBackgroundImage: {fileID: 21300000, guid: 21fc2f6b946e95a4bbe5c60d69885444, type: 3}
-  _clearCharacterImage: {fileID: 21300000, guid: 51a130135716ef34799922246bc40dde, type: 3}
+  _clearCharacterImage: {fileID: -2507495939876729859, guid: dca8bda273e1e424480c7a8f03370fc2, type: 3}
   _defeatCharacterImage: {fileID: 798281008451067728, guid: 00fbc9428bfa9ad4ba5969f739a23b03, type: 3}
   _themeImageList:
   - {fileID: 21300000, guid: 96771adaf3df6c84684b4eb140fd2918, type: 3}
-  - {fileID: 21300000, guid: 0a3dba0656221d94ca7a69081b469e47, type: 3}
+  - {fileID: 21300000, guid: 3984d7cb835fae94cb5268d8576f1a45, type: 3}
   - {fileID: 21300000, guid: ff99ce924e5a200409b4489c74df670f, type: 3}
   - {fileID: 21300000, guid: ba6f428a20069284991a130cfee07256, type: 3}
   - {fileID: 21300000, guid: 62c0c13b31c5cdb4d97f2b7f50aabb5a, type: 3}
